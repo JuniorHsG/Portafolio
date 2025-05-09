@@ -276,7 +276,7 @@ html{
 }
 @keyframes javascript {
     0%{width: 0%;}
-    100%{width: 75%;}
+    100%{width: 40%;}
 }
 
 .skills .skill .htmlcss{
@@ -285,7 +285,7 @@ html{
 }
 @keyframes htmlcss {
     0%{width: 0%;}
-    100%{width: 89%;}
+    100%{width: 40%;}
 }
 
 .skills .skill .photoshop{
@@ -294,7 +294,7 @@ html{
 }
 @keyframes photoshop {
     0%{width: 0%;}
-    100%{width: 95%;}
+    100%{width: 50%;}
 }
 
 .skills .skill .wordpress{
@@ -303,7 +303,7 @@ html{
 }
 @keyframes wordpress {
     0%{width: 0%;}
-    100%{width: 81%;}
+    100%{width: 60%;}
 }
 
 .skills .skill .drupal{
@@ -330,7 +330,7 @@ html{
 }
 @keyframes trabajo {
     0%{width: 0%;}
-    100%{width: 70%;}
+    100%{width: 80%;}
 }
 
 .skills .skill .creatividad{
@@ -339,7 +339,7 @@ html{
 }
 @keyframes creatividad {
     0%{width: 0%;}
-    100%{width: 99%;}
+    100%{width: 70%;}
 }
 
 .skills .skill .dedicacion{
@@ -348,7 +348,7 @@ html{
 }
 @keyframes dedicacion {
     0%{width: 0%;}
-    100%{width: 65%;}
+    100%{width: 85%;}
 }
 
 .skills .skill .proyect{
@@ -357,7 +357,7 @@ html{
 }
 @keyframes proyect {
     0%{width: 0%;}
-    100%{width: 94%;}
+    100%{width: 50%;}
 }
 /* SECCION CURRICULUM */
 .curriculum{
@@ -728,4 +728,70 @@ footer .arriba{
     .contacto .fila .col{
         width: 100%;
     }
+}
+/* Modal básico */
+.modal {
+    display: none; /* Escondido por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    color: #333; /* Asegúrate de que el texto sea oscuro y visible */
+}
+
+/* Botón de cerrar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Botón */
+.btn {
+    background-color: #721422;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Separar el botón del texto */
+}
+
+.btn:hover {
+    background-color: #5b0e1f;
+}
+
+/* Asegura que el texto en el modal sea legible */
+.modal-content h3,
+.modal-content p {
+    color: #333; /* Color oscuro para texto */
+}
+
+.modal-content p {
+    margin-bottom: 20px; /* Añadir espacio entre los párrafos */
 }
