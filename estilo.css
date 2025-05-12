@@ -315,13 +315,13 @@ html{
     100%{width: 55%;}
 }
 
-.skills .skill .comunicacion{
+.skills .skill .comunicacion {
     width: 0%;
     animation: 2s comunicacion forwards;
 }
 @keyframes comunicacion {
-    0%{width: 0%;}
-    100%{width: 80%;}
+    0% { width: 0%; }
+    100% { width: 80%; }
 }
 
 .skills .skill .trabajo{
@@ -794,4 +794,47 @@ footer .arriba{
 
 .modal-content p {
     margin-bottom: 20px; /* Añadir espacio entre los párrafos */
+}
+
+
+
+.lista-habilidades {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.lista-habilidades li {
+    background-color: #131517;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nivel {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nivel.basico {
+    background-color: #6b498f; /* violeta oscuro */
+    color: #ffffff;
+}
+
+.nivel.intermedio {
+    background-color: #4c536d; /* azul grisáceo */
+    color: #ffffff;
+}
+
+.nivel.avanzado {
+    background-color: #5e7263; /* verde grisáceo */
+    color: #ffffff;
 }
