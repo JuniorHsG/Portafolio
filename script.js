@@ -1,58 +1,72 @@
 let menuVisible = false;
-//Función que oculta o muestra el menu
+
+// Mostrar/Ocultar menú
 function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList ="";
-        menuVisible = false;
-    }else{
-        document.getElementById("nav").classList ="responsive";
-        menuVisible = true;
-    }
+    const nav = document.getElementById("nav");
+    nav.classList = menuVisible ? "" : "responsive";
+    menuVisible = !menuVisible;
 }
 
 function seleccionar(){
-    //oculto el menu una vez que selecciono una opcion
     document.getElementById("nav").classList = "";
     menuVisible = false;
 }
-//Funcion que aplica las animaciones de las habilidades
+
+// Animaciones de habilidades
 function efectoHabilidades(){
-    var skills = document.getElementById("skills");
-    var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
+    const skills = document.getElementById("skills");
+    const distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
     if(distancia_skills >= 300){
-        let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("javascript");
-        habilidades[1].classList.add("htmlcss");
-        habilidades[2].classList.add("photoshop");
-        habilidades[3].classList.add("wordpress");
-        habilidades[4].classList.add("drupal");
-        habilidades[5].classList.add("comunicacion");
-        habilidades[6].classList.add("trabajo");
-        habilidades[7].classList.add("creatividad");
-        habilidades[8].classList.add("dedicacion");
-        habilidades[9].classList.add("proyect");
+        const habilidades = document.getElementsByClassName("progreso");
+        const clases = [
+            "javascript", "htmlcss", "photoshop", "wordpress", "drupal",
+            "comunicacion", "trabajo", "creatividad", "dedicacion", "proyect"
+        ];
+        for (let i = 0; i < habilidades.length; i++) {
+            habilidades[i].classList.add(clases[i]);
+        }
     }
 }
 
-
-//detecto el scrolling para aplicar la animacion de la barra de habilidades
+// Aplicar animación de habilidades al hacer scroll
 window.onscroll = function(){
     efectoHabilidades();
-} 
-
-// Función para abrir el modal
-function openModal() {
-    document.getElementById("myModal").style.display = "block";
 }
 
-// Función para cerrar el modal
-function closeModal() {
-    document.getElementById("myModal").style.display = "none";
+// ✅ Funciones para múltiples modales
+function openModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = "block";
 }
 
-// Cerrar el modal si se hace clic fuera del contenido
+function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = "none";
+}
+
+// ✅ Cierre de cualquier modal al hacer clic fuera del contenido
 window.onclick = function(event) {
-    if (event.target == document.getElementById("myModal")) {
-        closeModal();
+    const modales = document.getElementsByClassName("modal");
+    for (let modal of modales) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
     }
 }
+
+// ✅ Carrusel por grupo
+let slideIndices = {};
+
+function changeSlide(group, step) {
+    const slides = document.querySelectorAll(`.carousel-slide.${group}`);
+    if (!slides.length) return;
+
+    if (!slideIndices[group]) slideIndices[group] = 0;
+
+    slideIndices[group] = (slideIndices[group] + step + slides.length) % slides.length;
+
+    slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === slideIndices[group]);
+    });
+}
+
