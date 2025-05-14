@@ -739,20 +739,23 @@ footer .arriba{
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    background-color: rgba(0, 0, 0, 0.7); 
 }
 
-/* Contenido del modal */
 .modal-content {
     background-color: #fff;
-    margin: 15% auto;
+    margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
+    width: 90%;             /* Más ancho */
+    max-width: 1000px;      /* Aumenta el límite máximo */
+    max-height: 90vh;       /* Altura máxima visible sin desbordar */
+    overflow-y: auto;       /* Habilita scroll interno si el contenido es muy largo */
     text-align: center;
-    color: #333; /* Asegúrate de que el texto sea oscuro y visible */
+    color: #333;
+    border-radius: 10px;
 }
+
 
 /* Botón de cerrar */
 .close {
@@ -786,14 +789,13 @@ footer .arriba{
     background-color: #5b0e1f;
 }
 
-/* Asegura que el texto en el modal sea legible */
 .modal-content h3,
 .modal-content p {
     color: #333; 
 }
 
 .modal-content p {
-    margin-bottom: 20px; /* Añadir espacio entre los párrafos */
+    margin-bottom: 20px; 
 }
 
 .carousel {
@@ -806,10 +808,11 @@ footer .arriba{
 .carousel-slide {
     display: none;
     width: 100%;
-    max-height: 300px;
-    object-fit: cover;
+    max-height: 500px; /* O más alto si quieres más tamaño */
+    object-fit: contain;
     border-radius: 8px;
 }
+
 
 .carousel-slide.active {
     display: block;
@@ -863,16 +866,16 @@ footer .arriba{
 }
 
 .nivel.basico {
-    background-color: #6b498f; /* violeta oscuro */
+    background-color: #6b498f; 
     color: #ffffff;
 }
 
 .nivel.intermedio {
-    background-color: #4c536d; /* azul grisáceo */
+    background-color: #4c536d; 
     color: #ffffff;
 }
 
 .nivel.avanzado {
-    background-color: #5e7263; /* verde grisáceo */
+    background-color: #5e7263; 
     color: #ffffff;
 }
