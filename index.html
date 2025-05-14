@@ -308,67 +308,77 @@
             </div>
         </div>
     </section>
-<section id="portfolio" class="portfolio">
-    <div class="contenido-seccion">
-        <h2>PORTFOLIO</h2>
-        <div class="galeria">
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            <div class="galeria">
 
-            <!-- Proyecto 1: SIGE -->
-            <div class="proyecto" onclick="openModal('myModal')">
-                <img src="img/sige_dashboard.png" alt="">
-                <div class="overlay">
-                    <h3>SIGE</h3>
-                    <p>Sistema Integral de Gestión Educativa para Instituciones Académicas</p>
-                </div>
-            </div>
-
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('myModal')">&times;</span>
-                    <h3>SIGE</h3>
-                    <p>Este sistema está diseñado para gestionar de manera eficiente todos los procesos administrativos en instituciones académicas, incluyendo la gestión de estudiantes, personal, cursos y recursos.</p>
-                    <p><strong>Arquitectura:</strong> El sistema está basado en una arquitectura distribuida y utiliza microservicios para garantizar escalabilidad, flexibilidad y facilidad de mantenimiento.</p>
-                    <a href="https://github.com/Devs-UNE/sige-sige-team.git" target="_blank">
-                        <button class="btn">Ver en GitHub</button>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Proyecto 2: Predicción de Ventas -->
-            <div class="proyecto" onclick="openModal('modalVentas')">
-                <img src="img/prediccion.png" alt="">
-                <div class="overlay">
-                    <h3>Predicción de Ventas</h3>
-                    <p>Modelo de proyección para dulcería y botanas</p>
-                </div>
-            </div>
-
-            <div id="modalVentas" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modalVentas')">&times;</span>
-                    <h3>Predicción de Ventas - Dulcería y Botanas</h3>
-                    <p>Este sistema permite analizar los datos históricos de ventas para predecir tendencias y optimizar el inventario de productos como gomitas, papas, chocolates y más.</p>
-                    <p><strong>Arquitectura:</strong> Aplicación web basada en microservicios con un modelo de aprendizaje automático en el backend, accesible desde cualquier navegador.</p>
-
-                    <!-- Carrusel -->
-                    <div class="carousel">
-                        <img class="carousel-slide ventas active" src="img/grafica de prediccion.png" alt="Dashboard principal">
-                        <img class="carousel-slide ventas" src="img/inventario.png" alt="Gráfica de predicción">
-                        <div class="carousel-controls">
-                            <button onclick="changeSlide('ventas', -1)">&#10094;</button>
-                            <button onclick="changeSlide('ventas', 1)">&#10095;</button>
-                        </div>
+                <!-- Proyecto 1: SIGE -->
+                <div class="proyecto" onclick="openModal('myModal')">
+                    <img src="img/sige_dashboard.png" alt="">
+                    <div class="overlay">
+                        <h3>SIGE</h3>
+                        <p>Sistema Integral de Gestión Educativa para Instituciones Académicas</p>
                     </div>
-
-                    <a href="https://github.com/usuario/proyecto-prediccion-ventas" target="_blank">
-                        <button class="btn">Ver en GitHub</button>
-                    </a>
                 </div>
-            </div>
 
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('myModal')">&times;</span>
+                        <h3>SIGE</h3>
+                        <p>Este sistema está diseñado para gestionar de manera eficiente todos los procesos
+                            administrativos en instituciones académicas, incluyendo la gestión de estudiantes, personal,
+                            cursos y recursos.</p>
+                        <p><strong>Arquitectura:</strong> El sistema está basado en una arquitectura distribuida y
+                            utiliza microservicios para garantizar escalabilidad, flexibilidad y facilidad de
+                            mantenimiento.</p>
+                        <a href="https://github.com/Devs-UNE/sige-sige-team.git" target="_blank">
+                            <button class="btn">Ver en GitHub</button>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: Predicción de Ventas -->
+                <div class="proyecto" onclick="openModal('modalVentas')">
+                    <img src="img/prediccion.png" alt="">
+                    <div class="overlay">
+                        <h3>Predicción de Ventas</h3>
+                        <p>Modelo de proyección para dulcería y botanas</p>
+                    </div>
+                </div>
+
+                <div id="modalVentas" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modalVentas')">&times;</span>
+                        <h3>Predicción de Ventas - Dulcería y Botanas</h3>
+                        <p>Este sistema fue desarrollado como parte de un proyecto de titulación con el objetivo de
+                            predecir las ventas semanales de productos en una tienda de dulcería y botanas. La
+                            herramienta ayuda a visualizar la demanda estimada y facilitar decisiones sobre el
+                            inventario.</p>
+                        <p><strong>Arquitectura:</strong> Es una aplicación web sencilla que utiliza un modelo de
+                            regresión lineal implementado en Python, con una base de datos local en SQLite y una
+                            interfaz construida con HTML, CSS y JavaScript.</p>
+
+                        <!-- Carrusel -->
+                        <div class="carousel">
+                            <img class="carousel-slide ventas active" src="img/grafica de prediccion.png"
+                                alt="Dashboard principal">
+                            <img class="carousel-slide ventas" src="img/inventario.png" alt="Gráfica de predicción">
+                            <div class="carousel-controls">
+                                <button onclick="changeSlide('ventas', -1)">&#10094;</button>
+                                <button onclick="changeSlide('ventas', 1)">&#10095;</button>
+                            </div>
+                        </div>
+
+                        <a href="https://github.com/usuario/proyecto-prediccion-ventas" target="_blank">
+                            <button class="btn">Ver en GitHub</button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- SECCION CONTACTO -->
