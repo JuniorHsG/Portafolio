@@ -159,13 +159,13 @@
 
                     <h3>Manejo de herramientas</h3>
                     <ul class="lista-habilidades">
-    <li><strong>Java:</strong> 1.5 años</li>
-    <li><strong>Python:</strong> 3 años</li>
-    <li><strong>HTML & CSS:</strong> 1 año</li>
-    <li><strong>PostgreSQL:</strong> 2 años</li>
-    <li><strong>Terminal Ubuntu:</strong> 6 meses</li>
-    <li><strong>Terminal Windows:</strong> 3 años</li>
-</ul>
+                        <li><strong>Java:</strong> 1.5 años</li>
+                        <li><strong>Python:</strong> 3 años</li>
+                        <li><strong>HTML & CSS:</strong> 1 año</li>
+                        <li><strong>PostgreSQL:</strong> 2 años</li>
+                        <li><strong>Terminal Ubuntu:</strong> 6 meses</li>
+                        <li><strong>Terminal Windows:</strong> 3 años</li>
+                    </ul>
 
                 </div>
                 <!-- Habilidades profecionales -->
@@ -351,6 +351,10 @@
                         <a href="https://github.com/Devs-UNE/sige-sige-team.git" target="_blank">
                             <button class="btn">Ver en GitHub</button>
                         </a>
+                        <a href="https://www.canva.com/design/DAGoZcYxRow/vCm6jAr3ADNGEtG0mwFKcA/edit?utm_content=DAGoZcYxRow&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                            target="_blank">
+                            <button class="btn">Presentación</button>
+                        </a>
                     </div>
                 </div>
 
@@ -402,18 +406,26 @@
         <div class="contenido-seccion">
             <h2>CONTACTO</h2>
             <div class="fila">
-                <!-- Formulario -->
-                <div class="col">
-                    <input type="text" placeholder="Tú Nombre">
-                    <input type="text" placeholder="Número telefónico">
-                    <input type="text" placeholder="Dirección de correo">
-                    <input type="text" placeholder="Tema">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <button>
-                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                <!-- FORMULARIO DE CONTACTO EN EL FOOTER -->
+                <form action="https://formsubmit.co/hectorsotelogomez@gmail.com" method="POST" class="col">
+                    <input type="text" name="nombre" placeholder="Tú Nombre" required>
+                    <input type="text" name="telefono" placeholder="Número telefónico" required>
+                    <input type="email" name="correo" placeholder="Dirección de correo" required>
+                    <input type="text" name="tema" placeholder="Tema" required>
+                    <textarea name="mensaje" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+
+                    <!-- Antibot -->
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <!-- Redireccionar luego de enviar -->
+                    <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+
+                    <button type="submit">
+                        Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
                         <span class="overlay"></span>
                     </button>
-                </div>
+                </form>
+
                 <!-- Mapa -->
                 <div class="col">
                     <img src="img/jalisco.png" alt="Ubicación">
