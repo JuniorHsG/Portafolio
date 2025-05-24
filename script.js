@@ -33,7 +33,7 @@ window.onscroll = function(){
     efectoHabilidades();
 }
 
-// ✅ Funciones para múltiples modales
+// Funciones para múltiples modales
 function openModal(id) {
     const modal = document.getElementById(id);
     if (modal) modal.style.display = "block";
@@ -44,7 +44,7 @@ function closeModal(id) {
     if (modal) modal.style.display = "none";
 }
 
-// ✅ Cierre de cualquier modal al hacer clic fuera del contenido
+// Cierre de cualquier modal al hacer clic fuera del contenido
 window.onclick = function(event) {
     const modales = document.getElementsByClassName("modal");
     for (let modal of modales) {
@@ -54,7 +54,7 @@ window.onclick = function(event) {
     }
 }
 
-// ✅ Carrusel por grupo
+//  Carrusel por grupo
 let slideIndices = {};
 
 function changeSlide(group, step) {
@@ -70,3 +70,40 @@ function changeSlide(group, step) {
     });
 }
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("form-contacto");
+    const mensajeExito = document.getElementById("mensaje-exito");
+
+    if (form) {
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault(); // Prevenir recarga/redirección
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    mensajeExito.style.display = "block";
+                    form.reset();
+
+                    setTimeout(() => {
+                        mensajeExito.style.display = "none";
+                    }, 5000);
+                } else {
+                    alert("Error al enviar el formulario.");
+                }
+            } catch (error) {
+                console.error("Error al enviar:", error);
+                alert("Ocurrió un error de red.");
+            }
+        });
+    }
+});

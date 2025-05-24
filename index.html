@@ -406,8 +406,8 @@
         <div class="contenido-seccion">
             <h2>CONTACTO</h2>
             <div class="fila">
-                <!-- FORMULARIO DE CONTACTO EN EL FOOTER -->
-                <form action="https://formsubmit.co/hectorsotelogomez@gmail.com" method="POST" class="col">
+                
+               <form id="form-contacto" action="https://formsubmit.co/hectorsotelogomez@gmail.com" method="POST" class="col">
                     <input type="text" name="nombre" placeholder="Tú Nombre" required>
                     <input type="text" name="telefono" placeholder="Número telefónico" required>
                     <input type="email" name="correo" placeholder="Dirección de correo" required>
@@ -416,9 +416,9 @@
 
                     <!-- Antibot -->
                     <input type="hidden" name="_captcha" value="false">
-
-                    <!-- Redireccionar luego de enviar -->
-                    <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+<div id="mensaje-exito" style="display: none; color: green; margin-bottom: 10px;">
+    ✅ Se ha enviado la información correctamente.
+</div>
 
                     <button type="submit">
                         Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
@@ -426,7 +426,7 @@
                     </button>
                 </form>
 
-                <!-- Mapa -->
+                
                 <div class="col">
                     <img src="img/jalisco.png" alt="Ubicación">
                     <div class="info">
